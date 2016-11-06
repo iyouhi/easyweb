@@ -1,0 +1,360 @@
+{include file="header.html"}
+    <div>
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <tbody><tr>
+                <td align="center" valign="top">
+                    <table cellpadding="0" cellspacing="0" width="1024px" style="background-color:White;">
+                        <tbody><tr>
+                            <td>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td align="left" valign="top" style="height:89px; background-image: url({$smarty.const.STATIC_PATH}images/bg_topapart.gif); background-repeat: repeat-x;">
+                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                <tbody><tr>
+                                                    <td style="width:30%; padding-left:50px; padding-top:25px;">
+                                                       <a href="./index_files/index.html" target="_self"> <img src="{$smarty.const.STATIC_PATH}images/logo.jpg" alt="" style="border:0px;"> </a>
+                                                    </td>
+                                                    
+                                                    <td align="right" style="width:70%; padding-right:53px; padding-top:13px;">
+                                                        <table cellpadding="0" cellspacing="0">
+                                                           <tbody><tr>
+                                                               
+                                                               <td style="vertical-align:top; padding-top:6px;">
+                                                                   
+                                                                   <img src="{$smarty.const.STATIC_PATH}images/tel.gif">
+                                                               </td>
+                                                           </tr>  
+                                                        </tbody></table>
+                                                        
+                                                    </td>
+                                                </tr>
+                                               
+                                            </tbody></table>
+                                        
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top" style="height:35px; background-image: url({$smarty.const.STATIC_PATH}images/bg_menutitle.gif); background-repeat: no-repeat;">
+                                        	{include file="menu.html"}
+                                        </td>
+                                    </tr>
+                                </tbody></table>  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                                {include file="slider.html"}
+
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td style="height:20px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" valign="top" style="height:180;">
+                                            <table cellpadding="0" cellspacing="0">
+                                                <tbody><tr>
+                                                    <td align="left" valign="top" style="width:338px; padding-left:10px; padding-right:4px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody><tr>
+                                                                <td style=" height:28px;">
+                                                                    
+                                                                    <table cellpadding="0" cellspacing="0">
+                                                                        <tbody><tr>
+                                                                            <td align="center" valign="top" style=" width:89px; display:block; cursor:pointer;" id="td_news_group" onclick="home_news_on(news_group);" onmouseover="home_news_on(news_group);">
+                                                                                <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                    <tbody><tr>
+                                                                                        <td align="center" id="td_news_group_title" style="color:#a60505; font-size:10pt; font-weight:bold;">
+                                                                                            集团新闻
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" style="padding-top:3px;">
+                                                                                            <img id="td_news_group_image" src="{$smarty.const.STATIC_PATH}images/bg_titlebutton_red.gif">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody></table>
+                                                                            </td>
+                                                                            
+                                                                            <td style="width:10px;"></td>
+
+                                                                            <td align="center" valign="middle" style=" width:89px; display:block; cursor:pointer;" id="td_news_gonggao" onclick="home_news_on(news_gonggao);" onmouseover="home_news_on(news_gonggao);">
+                                                                                <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                    <tbody><tr>
+                                                                                        <td align="center" id="td_news_gonggao_title" style=" font-size:10pt; font-weight:bold;">
+                                                                                            集团公告
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" style="padding-top:3px;">
+                                                                                            <img id="td_news_gonggao_image" src="{$smarty.const.STATIC_PATH}images/bg_titlebutton_grace.gif">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody></table>
+                                                                            </td>
+
+                                                                        </tr>
+                                                                    </tbody></table>
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                            <tr>
+                                                                <td style="padding-top:6px;">
+
+                                                                    <table cellpadding="0" cellspacing="0" width="100%" id="table_news_group"><tbody><tr><td><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding-left:16px; width:58px;"><table cellpadding="0" cellspacing="0"><tbody><tr><td style="background-image: url({$smarty.const.STATIC_PATH}images/bg_newsdate.gif); background-repeat: no-repeat; width:54px; height:56px;"><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="font-size:23pt; font-weight:bold ;padding-top:9px; color:#a60505; line-height:28px; text-align:center;">15</td></tr><tr><td style="text-align:center;">08月</td></tr></tbody></table></td></tr></tbody></table></td><td align="left" valign="top" style="padding-left:18px; padding-top:4px; height:75px;"><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style=" font-weight:bold;"><a href="http://www.xydec.com.cn/newsGroupdetail.aspx?id=11694" class="a_red" target="_self">关注灾难，致敬英雄，祈祷平安</a></td></tr><tr><td style="height:6px;"></td></tr><tr><td style="line-height:16px;"><a href="http://www.xydec.com.cn/newsGroupdetail.aspx?id=11694" class="a_red" target="_self">&nbsp;&nbsp;&nbsp;&nbsp;      爆炸地点：天津滨海新区第五大街与跃进路交 * 口      星艺装饰天津滨海新区工作室：天津滨海新区第三大街与洞...</a></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td align="left" style="padding-top:6px; padding-left:12px;"><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="height:17px; width:5px;"><img src="{$smarty.const.STATIC_PATH}images/news_arrow_red.gif"></td><td style="width:70px; text-align:center;">2015.07.27</td><td style="padding-left:4px;"><a href="http://www.xydec.com.cn/newsGroupdetail.aspx?id=11691" target="_self">集团奖励全国优秀经理和设计总监赴英考...</a></td></tr><tr><td style="height:17px; width:5px;"><img src="{$smarty.const.STATIC_PATH}images/news_arrow_red.gif"></td><td style="width:70px; text-align:center;">2015.07.24</td><td style="padding-left:4px;"><a href="http://www.xydec.com.cn/newsGroupdetail.aspx?id=11690" target="_self">星艺装饰2015年全国经理特训在复旦大学...</a></td></tr><tr><td style="height:17px; width:5px;"><img src="{$smarty.const.STATIC_PATH}images/news_arrow_red.gif"></td><td style="width:70px; text-align:center;">2015.07.14</td><td style="padding-left:4px;"><a href="http://www.xydec.com.cn/newsGroupdetail.aspx?id=10689" target="_self">星艺装饰-鑫拓集团启动设计生态圈共荣...</a></td></tr></tbody></table></td></tr></tbody></table>
+
+                                                                                                                                       
+                                                                    
+                                                                    <table cellpadding="0" cellspacing="0" width="100%" id="table_news_gonggao" style="display:none;"><tbody><tr><td><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding-left:16px; width:58px;"><table cellpadding="0" cellspacing="0"><tbody><tr><td style="background-image: url({$smarty.const.STATIC_PATH}images/bg_newsdate.gif); background-repeat: no-repeat; width:54px; height:56px;"><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="font-size:23pt; font-weight:bold ;padding-top:9px; color:#a60505; line-height:28px; text-align:center;">11</td></tr><tr><td style="text-align:center;">09月</td></tr></tbody></table></td></tr></tbody></table></td><td align="left" valign="top" style="padding-left:18px; padding-top:4px; height:75px;"><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style=" font-weight:bold;"><a href="http://www.xydec.com.cn/newsAnnouncementdetail.aspx?id=6620" class="a_red" target="_self">通报</a></td></tr><tr><td style="height:6px;"></td></tr><tr><td style="line-height:16px;"><a href="http://www.xydec.com.cn/newsAnnouncementdetail.aspx?id=6620" class="a_red" target="_self">&nbsp;&nbsp;&nbsp;&nbsp;在2014年全国设计总监特训中，下列单位人员无故缺席，根据集团培训制度规定和培训通知要求，给予通报批评。凡被通报的...</a></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td align="left" style="padding-top:6px; padding-left:12px;"><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="height:17px; width:5px;"><img src="{$smarty.const.STATIC_PATH}images/news_arrow_red.gif"></td><td style="width:70px; text-align:center;">2014.08.21</td><td style="padding-left:4px;"><a href="http://www.xydec.com.cn/newsAnnouncementdetail.aspx?id=6613" target="_self">2014年度经理培训缺训通报</a></td></tr><tr><td style="height:17px; width:5px;"><img src="{$smarty.const.STATIC_PATH}images/news_arrow_red.gif"></td><td style="width:70px; text-align:center;">2013.12.24</td><td style="padding-left:4px;"><a href="http://www.xydec.com.cn/newsAnnouncementdetail.aspx?id=3523" target="_self">图书征订通知（一）</a></td></tr><tr><td style="height:17px; width:5px;"><img src="{$smarty.const.STATIC_PATH}images/news_arrow_red.gif"></td><td style="width:70px; text-align:center;">2013.12.24</td><td style="padding-left:4px;"><a href="http://www.xydec.com.cn/newsAnnouncementdetail.aspx?id=3524" target="_self">图书征订通知（二）</a></td></tr></tbody></table></td></tr></tbody></table>
+
+
+                                                                   
+
+                                                                </td>
+                                                            
+                                                            </tr>
+                                                        
+                                                        </tbody></table>
+                                                    
+                                                    
+                                                    </td>
+                                                    <td align="center" valign="middle" style="width:5px;">
+                                                        <img src="{$smarty.const.STATIC_PATH}images/news_apart.gif">
+                                                    </td>
+
+                                                    <td align="left" valign="top" style="width:308px; padding-right:4px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody><tr>
+                                                                <td style=" height:28px;">
+                                                                    
+                                                                    <table cellpadding="0" cellspacing="0">
+                                                                        <tbody><tr>
+                                                                            <td align="center" valign="top" style=" width:89px; display:block; cursor:pointer;">
+                                                                                <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                    <tbody><tr>
+                                                                                        <td align="center" style="color:#a60505; font-size:10pt; font-weight:bold;">
+                                                                                            分支机构
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" style="padding-top:3px;">
+                                                                                            <img src="{$smarty.const.STATIC_PATH}images/bg_titlebutton_red.gif">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody></table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody></table>
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                            <tr>
+                                                                <td align="left" valign="top" style="padding-top:6px;padding-left:12px;">
+                                                                <table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="height:18px; color:#a60505; padding-right:4px;">[广州市]&nbsp;<a href="http://www.xydec.com.cn/newsBranchesdetail.aspx?id=11692" target="_self">黄埔公司召开2015年上半年工作...</a></td><td align="center" style="width:50px;">[08/06]</td></tr><tr><td style="height:18px; color:#a60505; padding-right:4px;">[海口市]&nbsp;<a href="http://www.xydec.com.cn/newsBranchesdetail.aspx?id=11689" target="_self">海南公司召开2015上半年总结大...</a></td><td align="center" style="width:50px;">[07/20]</td></tr><tr><td style="height:18px; color:#a60505; padding-right:4px;">[广州市]&nbsp;<a href="http://www.xydec.com.cn/newsBranchesdetail.aspx?id=10688" target="_self">低价，从来都不是我们吸引你的...</a></td><td align="center" style="width:50px;">[07/10]</td></tr><tr><td style="height:18px; color:#a60505; padding-right:4px;">[宜昌市]&nbsp;<a href="http://www.xydec.com.cn/newsBranchesdetail.aspx?id=10684" target="_self">设计师要尊重设计最基本的东西</a></td><td align="center" style="width:50px;">[06/29]</td></tr><tr><td style="height:18px; color:#a60505; padding-right:4px;">[上海市]&nbsp;<a href="http://www.xydec.com.cn/newsBranchesdetail.aspx?id=10683" target="_self">我的公公婆婆</a></td><td align="center" style="width:50px;">[06/27]</td></tr><tr><td style="height:18px; color:#a60505; padding-right:4px;">[海口市]&nbsp;<a href="http://www.xydec.com.cn/newsBranchesdetail.aspx?id=10682" target="_self">“星艺装饰杯”海口市第七届小...</a></td><td align="center" style="width:50px;">[06/16]</td></tr><tr><td style="height:18px; color:#a60505; padding-right:4px;">[广州市]&nbsp;<a href="http://www.xydec.com.cn/newsBranchesdetail.aspx?id=10681" target="_self">广州子公司第二届”绘天下“设...</a></td><td align="center" style="width:50px;">[06/02]</td></tr><tr><td style="height:18px; color:#a60505; padding-right:4px;">[海口市]&nbsp;<a href="http://www.xydec.com.cn/newsBranchesdetail.aspx?id=10680" target="_self">海南星艺装饰售后上门服务小组...</a></td><td align="center" style="width:50px;">[05/26]</td></tr></tbody></table>
+                                                                            
+                                                                        
+                                                                 
+
+                                                                </td>
+                                                            
+                                                            </tr>
+                                                        
+                                                        </tbody></table>
+                                                    
+                                                    
+                                                    </td>
+
+                                                    <td align="center" valign="middle" style="width:5px;">
+                                                        <img src="{$smarty.const.STATIC_PATH}images/news_apart.gif">
+                                                    </td>
+
+                                                    <td align="left" style="width:300px; padding-left:10px;">
+                                                        <table cellpadding="0" cellspacing="0">
+                                                            <tbody><tr>
+                                                                <td>
+                                                                    <a href="http://www.xydec.com.cn/designer.aspx" target="_self">
+                                                                    <img src="{$smarty.const.STATIC_PATH}images/orderdesigner.gif" border="0">
+                                                                    </a>
+                                                                </td>
+                                                                <td style="width:5px;"></td>
+                                                                <td>
+                                                                    <a href="http://www.xydec.com.cn/constructionstandards.aspx" target="_blank">
+                                                                    <img src="{$smarty.const.STATIC_PATH}images/constructionstandards.gif" border="0">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr><td style="height:5px;"></td></tr>
+                                                            <tr>
+                                                                <td colspan="3">
+                                                                    <a href="http://www.xydec.com.cn/xydecchina.aspx" target="_self">
+                                                                    <img src="{$smarty.const.STATIC_PATH}images/allxydec.gif" border="0">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    
+                                                    
+                                                    </td>
+                                                
+                                                </tr>
+                                            
+                                            </tbody></table>
+
+                                        </td>
+                                    </tr>
+                                
+                                </tbody></table>
+                            
+                            
+                            </td>
+                        
+                        </tr>
+
+                        
+
+
+                        <tr>
+                            <td>
+                                
+
+
+{literal}
+    <style type="text/css">
+     #jihuaslide{ position:fixed; bottom:2px; right:2px; display:none; background-color:White;}    
+     #reshow{position:fixed;right:2px;bottom:2px;font-size:12px; display:none;background-color:White; cursor:pointer;border:1px solid #000;}
+    </style>
+
+<script type="text/javascript">
+   function Jihua_Cnblogs_Com() { $("#jihuaslide").slideDown("slow"); $("#reshow").hide(); }
+    $(document).ready(function () {
+
+
+        //setTimeout(function () {
+        //    Jihua_Cnblogs_Com();
+        //}, 1000)
+
+
+        $("#xydecclose").click(function () {
+            $("#jihuaslide").slideUp("slow"); $("#reshow").show();
+        })
+        $("#reshow").mouseover(function () {
+            Jihua_Cnblogs_Com(); //jihua.cnblogs.com
+        })
+
+    })
+     </script>
+{/literal}
+
+
+
+
+
+
+
+
+
+    <div id="jihuaslide">            
+
+         <table cellpadding="0" cellspacing="0" width="257px">
+            <tbody><tr>
+                <td style="height:161px; width:257px; background-image: url({$smarty.const.STATIC_PATH}images/popwin/popWinBG.gif); background-repeat: no-repeat;" align="left" valign="top">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                            <td style="height:4px;">
+                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td align="right">
+                                            <a href="javaScript:void(0)" id="xydecclose">
+                                                <img src="{$smarty.const.STATIC_PATH}images/close.gif" border="0" alt="关闭">
+                                            </a>
+                                        </td>
+                                        <td style="width:14px;">
+                                        &nbsp;
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+
+                        <tr><td style="height:20px;"></td>
+                        </tr>
+
+                        <tr>
+                            <td align="center" style="height:28px; color:#920e14; font-size:10pt; line-height:28px; font-weight:bold;">
+                                 <a href="http://www.xydec.com.cn/2014/LoveHome.aspx" target="_blank" class="a_red_popwin">
+                                爱家居，星艺装饰浓情礼遇
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td align="left" style="color:#920e14; font-size:9pt; line-height:16px; padding-left:8px; padding-right:8px; ">
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="http://www.xydec.com.cn/2014/LoveHome.aspx" target="_blank" class="a_red_popwin">
+                                2014年即日起——6月18日，爱家居，星艺装饰浓情礼遇！星艺装饰全国活动送礼：领取爱家基金、抽取装修礼品、微信扫码刮刮乐，三重豪礼送不停。
+
+                                </a>
+                                
+                            </td>
+                        </tr>
+
+                        <tr><td style="height:5px;"></td></tr>
+
+
+                        <tr>
+                            <td>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td align="right">
+                                             <a href="http://www.xydec.com.cn/2014/LoveHome.aspx" target="_blank">
+                                                查看
+                                            </a>
+                                        </td>
+                                        <td style="width:15px;">
+                                        &nbsp;
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+
+
+
+                    </tbody></table>
+
+                </td>
+            </tr>
+         </tbody></table>
+
+
+     </div>
+
+            {include file="bottom.html"}
+
+
+
+
+
+                                
+                            </td>
+                            
+                        
+                        
+                        </tr>
+
+                    </tbody></table>
+                
+                </td>
+            
+            </tr>
+        
+        </tbody></table>
+    
+    </div>
+
+{include file="footer.html"}

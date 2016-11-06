@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>管理系统</title>
+<link rel="stylesheet" rev="stylesheet" href="{$smarty.const.ADMIN_CSS_PATH}style.css" type="text/css" media="all" />
+
+<style type="text/css">
+{literal}
+<!--
+.atten {font-size:12px;font-weight:normal;color:#F00;}
+-->
+{/literal}
+</style>
+</head>
+
+<body class="ContentBody">
+<form action="" method="post" enctype="multipart/form-data" name="form1">
+<div class="MainDiv">
+	<table width="99%" border="0" cellpadding="0" cellspacing="0" class="CContent">
+		<tr>
+			<th class="tablestyle_title" >修改用户</th>
+		</tr>
+		<tr>
+			<td class="CPanel">
+				<table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+					<tr>
+						<td align="left">
+							<input type="button" name="Submit" value="修改" class="button" onclick="from1.submit();"/>　
+							<input type="button" name="Submit2" value="返回" class="button" onclick="window.history.go(-1);"/>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<TR>
+			<TD width="100%">
+				<fieldset style="height:100%;">
+					<legend>修改用户</legend>
+					<table border="0" cellpadding="5" cellspacing="1" style="width:100%">
+						<tr>
+							<td nowrap="nowrap" align="right">所属分组:</td>
+							<td>
+								<span class="red">
+									<select name="user[gid]">
+										{$category}
+									</select>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" align="right">用户名:</td>
+							<td>
+								<span class="red">
+									<input name="user[name]" type="text" readonly class="text" style="width:154px" value="{$userinfo.name}" />*
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" align="right">真实姓名:</td>
+							<td>
+								<span class="red">
+									<input name="user[realname]" type="text" class="text" style="width:154px" value="{$userinfo.realname}" />*
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" align="right">用户说明:</td>
+							<td>
+								<span class="red">
+									<textarea name="user[memo]" rows="5" cols="65">{$userinfo.memo}</textarea>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" align="right">状态:</td>
+							<td>
+								<span class="red">
+									<select name="user[status]">
+										<option value="0" {if !$userinfo.status}selected{/if}>未通过</option>
+										<option value="1" {if $userinfo.status}selected{/if}>通过审核</option>
+									</select>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" align="right">性别:</td>
+							<td>
+								<span class="red">
+									{$userext.gender}
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" align="right">所在单位:</td>
+							<td>
+								<span class="red">
+									{$userext.enterprise}
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" align="right">邮箱:</td>
+							<td>
+								<span class="red">
+									{$userext.email}
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" align="right">联系电话:</td>
+							<td>
+								<span class="red">
+									{$userext.phone}
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan=2 ><span class="red">{$msg}</span></td>
+						</tr>
+					</table>
+					<br />
+				</fieldset>			
+			</TD>
+		</TR>
+		<TR>
+			<TD colspan="2" align="center" height="50px">
+				<input type="hidden" name="uid" value="{$userinfo.uid}"/>
+				<input type="submit" name="issubmit" value="修改" class="button"/>　
+				<input type="button" name="Submit2" value="返回" class="button" onclick="window.history.go(-1);"/>
+			</TD>
+		</TR>
+	</TABLE>
+</div>
+</form>
+</body>
+</html>

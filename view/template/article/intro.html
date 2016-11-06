@@ -1,0 +1,44 @@
+{include file="header.html"}
+<div class="mainBody">
+	<div class="leftText" style='border:1px solid #CCCCCC;'>
+		<div style="margin:20px;">
+			<table width="100%" cellspacing="1" cellpadding="5" border="0" align="center">
+				<tbody>
+					<tr>
+						<td width="691" style="border-bottom: 1px solid rgb(213, 216, 223); padding-bottom: 10px; padding-top: 20px;">
+							<div align="center">
+								<span style=" font-size: 18px;font-weight: bold;">{$article.title}</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-bottom: 18px; padding-top: 13px;">
+							<div align="center">作者：{$article.author}　    {$article.atime}</div>
+						</td>
+					</tr>
+					<tr>
+					  <td class="content">
+							{$article.content}
+								<center></center>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+  <div class="righText">
+		<div class="mainText" style="width:218px;margin-top:0;">
+			<div class="textTetal"> <span style="float:left;">中心概况</span></div>
+			<ul style="margin:0;width:180px;">       
+			{foreach from=$zxgkList item=item name=name}
+				{if $smarty.foreach.name.last}
+					<li style="border:none;"><a href="{$smarty.const.BASE_DOMAIN}article/intro.php?aid={$item.aid}">{$item.title}</a></li>
+				{else}
+					<li><a href="{$smarty.const.BASE_DOMAIN}article/intro.php?aid={$item.aid}">{$item.title}</a></li>
+				{/if}
+			{/foreach}
+			</ul>
+		</div> 
+  </div>
+</div>
+{include file="footer.html"}

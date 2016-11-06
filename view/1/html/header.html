@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>易思英语</title>
+<link href="{$smarty.const.CSS_PATH}style.css" rel="stylesheet" type="text/css" />
+{literal}
+<script>
+function AddFavorite(sURL, sTitle)
+{
+     try
+     {
+         window.external.addFavorite(sURL, sTitle);
+     }
+     catch (e)
+     {
+         try
+         {
+             window.sidebar.addPanel(sTitle, sURL, "");
+         }
+         catch (e)
+         {
+             alert("加入收藏失败，有劳您手动收藏我们: http://www.speakeasytc.com/ ");
+         }
+     }
+}  
+</script>
+{/literal}
+</head>
+
+<body>
+<div class="wrap">
+	<div class="top">
+    	<div class="logo"><a href="#"><img src="{$smarty.const.IMG_PATH}logo.gif" alt="易思英语" /></a></div>
+        <div class="hotLine"><img src="{$smarty.const.IMG_PATH}hotline.gif" alt="" /></div>
+        <a class="sc" title="收藏本站" href="javascript:void(0);" onclick="AddFavorite('http://www.speakeasytc.com/','思易英语');">收藏本站</a>
+    </div>
+    <ul class="menu">
+    	<li><a title="首页" href="{$smarty.const.BASE_DOMAIN}article/home.php"><img src="{$smarty.const.IMG_PATH}menu01.gif" alt="首页" /></a></li>
+        <li class="line"></li>
+        <li><a title="关于我们" href="{$smarty.const.BASE_DOMAIN}article/article.php?cid={$smarty.const.CATE_GYWM}"><img src="{$smarty.const.IMG_PATH}menu05.gif" alt="关于我们" /></a></li>
+        <li class="line"></li>
+        <li><a title="课程设置" href="{$smarty.const.BASE_DOMAIN}article/single.php?singleid={$smarty.const.SINGLEPAGE_KCSZ}"><img src="{$smarty.const.IMG_PATH}menu02.gif" alt="课程设置" /></a></li>
+        <li class="line"></li>
+        <li><a title="教学理念" href="{$smarty.const.BASE_DOMAIN}article/single.php?singleid={$smarty.const.SINGLEPAGE_JXLN}"><img src="{$smarty.const.IMG_PATH}menu03.gif" alt="教学理念" /></a></li>
+        <li class="line"></li>
+        <li><a title="师资力量" href="{$smarty.const.BASE_DOMAIN}article/article.php?cid={$smarty.const.CATE_SZLL}"><img src="{$smarty.const.IMG_PATH}menu04.gif" alt="师资力量" /></a></li>
+        <li class="line"></li>        
+        <li><a title="易思活动" href="{$smarty.const.BASE_DOMAIN}article/article.php?cid={$smarty.const.CATE_SYHD}"><img src="{$smarty.const.IMG_PATH}menu06.gif" alt="思易活动" /></a></li>
+        <li class="line"></li>
+        <li><a title="Q &amp; A" href="{$smarty.const.BASE_DOMAIN}article/single.php?singleid={$smarty.const.SINGLEPAGE_QA}"><img src="{$smarty.const.IMG_PATH}menu07.gif" alt="Q &amp; A" /></a></li>
+    </ul>

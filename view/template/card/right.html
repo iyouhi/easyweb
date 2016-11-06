@@ -1,0 +1,31 @@
+   <div class="wscxBox">
+      <div class="chaxun">
+      <form action="{$smarty.const.BASE_DOMAIN}card/card.php" method="get" name="card">
+        <h2>证书查询</h2>
+        <span style="padding-right:12px;">编码：</span>
+        <input class="butText" name="code" value=""/>
+        <span>校验码：</span>
+        <input class="butText" name="jym" value=""/>
+        <input type="button"  style="margin-left:40px" class="butTwo" value=" 查询 " onclick="card.submit();"/>
+        <input type="button" class="butTwo" value=" 帮助 " />
+       </form>
+      </div>
+      <div class="chaxun">
+      <form action="{$smarty.const.BASE_DOMAIN}card/lable.php" method="get" name="lable">
+      	<h2>标签查询</h2>
+        <span>证签号：</span><input class="butText" name="code" value=""/>
+        <input type="button"  style="margin-left:40px" class="butTwo" value=" 查询 " onclick="lable.submit();"/>
+        <input type="button" class="butTwo" value=" 帮助 " />
+      </form>
+      </div>
+      <div class="chaxun">
+      <form action="{$smarty.const.BASE_DOMAIN}card/report.php" method="get" name="report">
+            <h2>报告查询</h2>
+            <span>样品编号：</span><input class="butText" name="ypcode" value=""/>
+            <span>委托单位：</span><input class="butText" name="wtdw" value=""/>
+            <input type="button" style="margin-left:40px" class="butTwo" value=" 查询 " onclick="report.submit();"/>
+            <input type="button" class="butTwo" value=" 帮助 " />
+      </form>
+      </div>
+    </div>
+

@@ -1,0 +1,28 @@
+  
+		<div class="mainText" style="width:218px;margin-top:0;">
+			<div class="textTetal"> <span style="float:left;">新闻咨询</span></div>
+			<ul style="margin:0;width:180px;">       
+			{foreach from=$xwzxList item=item name=name}
+				{if $smarty.foreach.name.last}
+					<li style="border:none;"><a href="{$smarty.const.BASE_DOMAIN}article/article.php?aid={$item.aid}">{$item.title}</a></li>
+				{else}
+					<li><a href="{$smarty.const.BASE_DOMAIN}article/article.php?aid={$item.aid}">{$item.title}</a></li>
+				{/if}
+			{/foreach}
+			</ul>
+		</div>
+		<div class="mainText" style="width:218px;">
+			<div class="textTetal"> <span style="float:left;">教育培训</span></div>
+			<ul style="margin:0;width:180px;">       
+			{foreach from=$jypxList item=item name=name}
+				{if $smarty.foreach.name.last}
+					<li style="border:none;"><a href="{$smarty.const.BASE_DOMAIN}article/article.php?aid={$item.aid}">{$item.title}</a></li>
+				{else}
+					<li><a href="{$smarty.const.BASE_DOMAIN}article/article.php?aid={$item.aid}">{$item.title}</a></li>
+				{/if}
+			{/foreach}
+
+			</ul>
+		</div>
+
+

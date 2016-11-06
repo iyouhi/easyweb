@@ -1,0 +1,60 @@
+{include file="header.html"}
+  <div class="infos">
+    <!--left-->
+    <div class="left">
+      <div class="bns"> <strong>联系我们</strong></div>
+      <div class="sbdh"> 
+        
+        <p>{$project.contact}</p>
+        
+         </div>
+    </div>
+    <!--right-->
+    <div class="neirong">
+      <div class="nr_title f12" style=" width:580px; float:right;  padding:0 10px; border:1px #CCC solid;font-weight:bold; font-size:12px; height:27px; line-height:27px; text-align:left; margin-top:10px;">{$cateInfo.cname}</div>
+      <div class="nrs"><br>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td height="42" colspan="3"> 
+
+
+              {foreach from=$articleList item=item}
+              <div style="float:left; width:185px; height:200px; margin:2px;">
+                <table align="center" width="170" border="0" cellspacing="2" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td colspan="2"><table align="center" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td width="180" height="160" valign="middle" align="center"><div style="width:180px;" align="center"><a href="/article.php?aid={$item.aid}" title="baby Climb clothes"><img src="{$item.pic}" width="120" height="160" border="0" onload="javascript:DrawImage(this);" alt="600×800"></a><br>
+                                </div></td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td align="right" class="f12">名称:</td>
+                      <td width="80%" class="f12"><a href="/article.php?aid={$item.aid}" title="{$item.title}">{$item.title}</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              {/foreach}
+                       
+             </td>
+          </tr>
+          <tr>
+            <td height="1" colspan="3"><table align="center">
+                <tbody><tr>
+                  <td class="f12"><span>[{$pageinfo.page}/{$pageinfo.totalpage}]</span>&nbsp;<span class="nolink"> &lt;&lt; </span><span class="nolink"> &lt; </span><span><font color="red">1</font></span>&nbsp;<a href="?122_2.html">2</a>&nbsp;<a href="?122_3.html">3</a>&nbsp;<a href="?122_4.html">4</a>&nbsp;<a href="?122_5.html">5</a>&nbsp;<a href="?122_6.html">6</a>&nbsp;<a href="?122_7.html">7</a>&nbsp;<a href="?122_8.html">8</a>&nbsp;<a href="?122_2.html"> &gt; </a><a href="?122_18.html"> &gt;&gt; </a></td>
+                </tr>
+              </tbody></table></td>
+          </tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    
+  </div>
+  <div align="center"> </div>
+{include file="footer.html"}

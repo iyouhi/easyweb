@@ -1,0 +1,39 @@
+{include file="header.html"}
+    <div class="main content">
+    	<div class="left">
+        	<h2><img src="{$smarty.const.IMG_PATH}xxclew.gif" alt="" /></h2>
+            <div class="leftCont">
+            	{$xxjjInfo.content}
+            </div><!--leftCont end-->
+        </div><!--left end-->
+        <div class="right">
+        	<div class="breadCrumb">您现在所在的位置：<a href="{$smarty.const.BASE_DOMAIN}article/home.php">首页</a> &gt; {$cateInfo.cname}</div>
+            <div class="mainCont">
+            	<h1>{$article.title}</h1>
+                <div class="time">{$article.atime}</div>
+                <div id="image_wrap">
+                  {$article.content}        
+              	</div>
+                <div class="scrollTop"></div>
+                <div class="scroll">
+                	<!-- "previous page" action -->
+                    <a class="prev browse l"></a>
+                    <!-- root element for scrollable -->
+                    <div class="scrollable">      
+                       <!-- root element for the items -->
+                       <div class="items">   
+                          <!-- 1-5 -->
+                          <div>
+						  {foreach from=$articleList item=item}
+                             <a href="{$smarty.const.BASE_DOMAIN}article/article.php?cid={$item.cid}&aid={$item.aid}"><img src="{$smarty.const.BASE_DOMAIN}userfiles/{$item.pic}" title="{$item.memo}" /></a>
+						  {/foreach}
+                          </div>      
+                       </div>   
+                    </div>
+                    <!-- "next page" action -->
+                    <a class="next browse r"></a>
+                </div><!--scroll end-->
+            </div><!--mainCont end-->
+        </div><!--right end-->	
+    </div><!--main end-->
+{include file="footer.html"}

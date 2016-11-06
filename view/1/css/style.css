@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td{margin:0;padding:0;}
+body{ font:normal 12px/180% Verdana, Geneva, sans-serif, "黑体"; color:#666;}
+li,p {text-align:left;}
+a:link,a:visited,a:active{color:#086cb7;text-decoration:none;}
+a:hover{color:#086cb7;text-decoration:underline;}
+img{border:none;}
+ol,ul,li{list-style:none;}
+.clearfix:after {clear:both; content:"."; display:block; height:0pt; visibility:hidden; overflow:hidden;}
+.clearfix{clear:both; height:1px; margin-top:-1px; width:100%; overflow:hidden;}
+.homeWrap {width:980px; margin:0 auto; overflow:hidden; zoom:1;}
+.homeWrap .logo { text-align:center; width:980px; overflow:hidden;}
+.homeWrap .homeMain { text-align:center;width:980px; overflow:hidden; height:350px;}
+.homeWrap .homeMain h1 { text-indent:-999em; float:left;}
+.homeWrap .goto { font-size:16px; font-weight:bold; text-align:right; padding:20px 245px 20px 0; overflow:hidden;}
+.homeWrap .goto a:link,.homeWrap .goto a:visited,.homeWrap .goto a:active { color:#106fb1; text-decoration:none;}
+.homeWrap .goto a:hover { color:#106fb1; text-decoration:underline;}
+.homeWrap .footer { overflow:hidden; zoom:1; padding:10px 20px; border-top:1px solid #ddd;}
+.wrap .footer { overflow:hidden; zoom:1; padding:10px 0; border-top:1px solid #fed700; background:#fff;}
+.wrap .indexFooter {background:#e0f1f8;}
+.homeWrap .footer p { text-align:center;color:#086cb7;}
+.wrap .footer p { color:#086cb7; text-align:center;}
+.footer p span { padding:0 0 0 20px;}
+.wrap {width:100%; background:url(../images/bg.gif) repeat-x top center; overflow:hidden; zoom:1;}
+.top,.menu,.main,.footer {width:1004px; margin:0 auto; overflow:hidden; zoom:1;}
+.top { height:128px; position:relative;}
+.top .logo { position:absolute; top:0; left:410px; width:177px; height:124px; display:block;}
+.top .hotLine { position:absolute; top:0; right:0; width:237px; height:127px;}
+.top a.sc { position:absolute; top:105px; left:0; padding:0 0 0 24px; background:url(../images/scclew.gif) no-repeat; font-size:14px;}
+.top a.sc:link,.top a.sc:visited,.top a.sc:active { color:#086cb7; text-decoration:none;}
+.top a.sc:hover { color:#086cb7; text-decoration:underline;}
+.menu { background:url(../images/menubg.gif) repeat-x; height:39px; overflow:hidden;}
+.menu li { float:left;}
+.menu li.line { background:url(../images/menuge.gif) no-repeat; width:21px; height:39px;}
+.main { margin:1px auto 0; background:#e0f1f8; overflow:hidden; zoom:1;}
+.mainList { padding:20px 0 20px 100px; overflow:hidden; zoom:1;}
+.mainList li { background:url(../images/mbg.gif) no-repeat; width:321px; height:168px; float:left; margin:12px 40px; display:inline; position:relative;}
+.mainList li a {width:321px; height:168px; display:block; cursor:pointer;}
+.mainList li a h2 { font-size:16px; color:#086cb7; position:absolute; overflow:hidden; text-align:center; top:0; left:0; width:321px; line-height:30px;}
+.mainList li a h3 { position:absolute; color:#fff; font-size:14px; top:34px; left:177px;}
+.mainList li a p { position:absolute; color:#086cb7; font-size:12px; line-height:22px; top:60px; left:177px; width:130px;}
+.mainList li a img.img {width:143px; height:95px; padding:6px; border:1px solid #c5c8ca; position:absolute; top:40px; left:10px; background:#fff;}
+.mainList li a:hover { text-decoration:none;width:321px; height:168px; display:block; float:left;}
+.mainList li a:hover h2,.mainList li a:hover h3 { text-decoration:underline;}
+.content { background:#fff; margin:10px auto;}
+.content .right {width:754px; float:right; border-left:1px solid #ddd; border-top:2px solid #a3d1f0; border-right:1px solid #ddd; border-bottom:1px solid #ddd; min-height:400px; height:auto !important; height:400px;}
+.breadCrumb { background:url(../images/breadbg.gif) repeat-x; border-bottom:1px solid #e1e9f0; height:26px; line-height:26px; font-weight:bold; font-size:14px; padding:0 0 0 10px; color:#086cb7;}
+.content .left { float:left; width:215px; padding:10px; background:url(../images/rightbg.gif) repeat-x top center;}
+.mainCont { padding:10px 20px; overflow:hidden; zoom:1;}
+.mainCont h1 { font-size:21px; padding:20px 0 0; color:#086cb7; line-height:30px; text-align:center; font-family:"黑体";}
+.mainCont .time { text-align:right; padding:0 0 10px; color:#ddd;}
+.mainCont .summary { text-indent:2em; border:1px solid #dfdfdf; background:#f5f5f5; padding:10px 20px; color:#221815; font-size:14px; margin:0 0 20px; overflow:hidden;}
+.mainCont .cont { font-size:14px; line-height:25px;}
+.mainCont .cont p{ text-indent:2em; padding:0 0 10px;}
+.mainCont .cont p.img { text-align:center; padding:10px 0;}
+.mainCont .cont p.img img { padding:1px; border:1px solid #f4f4f4;}
+.left h2 { font-size:14px; color:#086cb7; line-height:30px; text-align:center;}
+.leftCont,.scrollCont { padding:20px 0; overflow:hidden; zoom:1;}
+.leftCont p,.scrollCont p { font-size:14px; line-height:25px; text-indent:2em;}
+.leftCont p.blue { color:#086cb7;}
+.scrollTop {background:url(../images/scrolltopbg.gif) repeat-x top center; height:3px; overflow:hidden; zoom:1;}
+.scrollCont { border-top:1px dotted #ddd; padding:15px 20px;}
+.scrollCont p { text-indent:2em;}
+#words { font-size:14px; line-height:25px; text-indent:2em; padding:15px 0 0 110px; overflow:hidden; width:500px; float:left; clear:both;}
+
+/*scroll部分*/
+.scroll {width:100%; overflow:hidden; zoom:1;}
+#image_wrap {/* dimensions */margin:15px 0 15px 0;/* centered */ padding:15px 0 0;text-align:center;/* some "skinning" */	border-top:2px solid #ddd; overflow:hidden; zoom:1;}
+.scrollable {/* required settings */position:relative;overflow:hidden;width: 660px;	height:165px;}
+/* this cannot be too large */
+.scrollable .items {width:20000em;position:absolute;clear:both;}
+.items div {float:left;	width:680px;}
+/* single scrollable item */
+.scrollable img {float:left;margin:20px 5px 20px 17px;background:url(../images/scroolpicbg.gif) no-repeat;padding:3px 4px;width:187px;height:125px;	display:inline;}
+/* active item */
+.scrollable .active {background:#086cb7;position:relative;cursor:default;-moz-border-radius:8px;-webkit-border-radius:8px;}
+/* this makes it possible to add next button beside scrollable */
+.scrollable {float:left;}
+/* prev, next, prevPage and nextPage buttons */
+a.browse {display:inline; width:16px; height:60px; float:left;margin:50px 10px 0;cursor:pointer;	font-size:1px;}
+/* right */
+a.r{background:url(../images/toright.gif) no-repeat; clear:right; margin-right: 0px;}
+/* left */
+a.l{background:url(../images/toleft.gif) no-repeat; margin-left: 0px; } 
+/* disabled navigational button */
+a.disabled {visibility:hidden !important;} 	
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>国家首饰质量监督检验中心</title>
+<link href="{$smarty.const.CSS_PATH}style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="{$smarty.const.JS_PATH}jquery.js"></script>
+<script language="javascript" src="{$smarty.const.JS_PATH}common.js"></script>
+<script language="javascript" src="{$smarty.const.JS_PATH}imagechange.js"></script>
+</head>
+
+<body>
+<div style="background-color:#FFFFFF;width:940px;margin:0 auto;">
+<div class="header">
+	<img src="{$smarty.const.IMG_PATH}header01.gif" /><a href='javascript:void(0);' onclick='sethome(this,"{$smarty.const.BASE_DOMAIN}");'>设为首页</a><img src="{$smarty.const.IMG_PATH}header01.gif" /><a href='javascript:addfavorite("{$smarty.const.BASE_DOMAIN}", "国家首饰质量监督检验中心");'>加入收藏</a>
+</div>
+<div class="mainNav">
+	<ul>
+    	<li style="width:45px;"><a href="{$smarty.const.BASE_DOMAIN}index.php">首页</a></li>
+        <li style="width:80px;"><a href="{$smarty.const.BASE_DOMAIN}article/intro.php">中心概况</a></li>
+        <li style="width:80px;"><a href="{$smarty.const.BASE_DOMAIN}article/list.php?cid=1">新闻资讯</a></li>
+		<li style="width:80px;"><a href="{$smarty.const.BASE_DOMAIN}article/list.php?cid=2">首饰检测</a></li>
+		<li style="width:80px;"><a href="{$smarty.const.BASE_DOMAIN}article/list.php?cid=4">珠宝知识及鉴赏</a></li>
+        <li style="width:80px;"><a href="{$smarty.const.BASE_DOMAIN}article/list.php?cid=4">证书介绍</a></li>
+		<li style="width:80px;"><a href="{$smarty.const.BASE_DOMAIN}article/list.php?cid=4">证书查询</a></li>
+        <li style="width:80px;"><a href="{$smarty.const.BASE_DOMAIN}article/list.php?cid=3">教育培训</a></li>
+        <li style="width:90px;"><a href="{$smarty.const.BASE_DOMAIN}committee/comitelist.php?cid=7">首饰标委会</a></li>        
+        <li style="width:80px;"><a href="{$smarty.const.BASE_DOMAIN}message/messagelist.php">留言中心</a></li>
+        <li style="width:80px;"><a href="{$smarty.const.BASE_DOMAIN}article/contactus.php">联系我们</a></li>
+    </ul>
+</div>

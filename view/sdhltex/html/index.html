@@ -1,0 +1,56 @@
+{include file="header.html"}
+  <div class="iinfos">
+    <!--left-->
+    <div class="left">
+      <div class="bns"> <strong>联系我们</strong></div>
+      <div class="sbdh"> 
+        
+        <p>{$project.contact}</p>
+        
+         </div>
+    </div>
+    <!--right-->
+    <div class="right">
+      <div class="right_t">
+        <div class="right_l">
+          <div class="kcjj">
+            <div class="tl"><span class="frl"><strong>公司介绍</strong></span></div>
+            <div class="sbdhs"> 
+              
+              <p>
+	              {$project.description}
+
+				</p>
+              
+               </div>
+          </div>
+        </div>
+        <div class="right_r">
+		<div class="jxzx"></div>
+          <div class="jxzxl">
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="244" height="197" id="FLVPlayer">
+              <param name="movie" value="{$smarty.const.STATIC_PATH}html/FLVPlayer_Progressive.swf">
+              <param name="salign" value="lt">
+              <param name="quality" value="high">
+              <param name="scale" value="noscale">
+              <param name="FlashVars" value="&amp;MM_ComponentVersion=1&amp;skinName=Clear_Skin_1&amp;streamName=IMG_0739&amp;autoPlay=false&amp;autoRewind=false">
+              <embed src="{$smarty.const.STATIC_PATH}html/FLVPlayer_Progressive.swf" flashvars="&amp;MM_ComponentVersion=1&amp;skinName=Clear_Skin_1&amp;streamName=IMG_0739&amp;autoPlay=false&amp;autoRewind=false" quality="high" scale="noscale" width="244" height="197" name="FLVPlayer" salign="LT" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">            
+</object>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div align="center"> </div>
+  <div class="product"> 
+    <dl><dt class="pr"><strong>&nbsp;</strong></dt>
+    <dd>
+      <ul>
+        {foreach from=$category_on_other item=item}
+      <li><a href="/list.php?cid={$item.cid}"><img src="{$item.pic}" width="156" height="87" border="0"><p>{$item.cname}</p></a></li>
+      {/foreach}
+    </ul>
+    </dd> 
+  </dl></div>
+{include file="footer.html"}

@@ -1,0 +1,26 @@
+<div class="sidebar">
+
+	<div class="sidebar-nav">
+	<h4 style="color:rgb(18,101,103);text-transform:capitalize;font-size: 1.6em;">联系方式</h4>
+	<nav>
+		<ul>
+			<li><img src="{$smarty.const.STATIC_PATH}images/arrow.png" alt=""><a>地址:{$project.address}</a></li>
+			<li><img src="{$smarty.const.STATIC_PATH}images/arrow.png" alt=""><a>电话:{$project.phone}</a></li>
+			<li><img src="{$smarty.const.STATIC_PATH}images/arrow.png" alt=""><a>手机:{$project.mobile}</a></li>
+			<li><img src="{$smarty.const.STATIC_PATH}images/arrow.png" alt=""><a>邮箱:{$project.email}</a></li>
+		</ul>
+	</nav>
+	</div>
+</div>
+<div class="sidebar1">
+	<h4>{$home_position.5.category_info.cname}</h4>
+	<img src="{$smarty.const.STATIC_PATH}images/pic3.jpg" width="195px" alt="">
+	<nav>
+		<ul>
+			{foreach from=$home_position.5.articles item=item}
+			<li><a href="/article.php?aid={$item.aid}">{$item.title}</a></li>
+			{/foreach}
+		</ul>
+	</nav>
+</div>
+<div class="clear"></div>

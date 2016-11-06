@@ -1,0 +1,156 @@
+{include file="header.html"}
+{literal}
+<script>
+// 需要你写的数据
+var data = [{/literal}
+{foreach from=$recmdList item=item name=name}
+{literal}{{/literal}
+		title:'{$item.title}',desc:'{$item.memo}',src:'{$smarty.const.BASE_DOMAIN}/userfiles/{$item.pic}',href:'{$smarty.const.BASE_DOMAIN}article/article.php?aid={$item.aid}',target:'_blank'
+{literal}}{/literal}
+{if !$smarty.foreach.name.last}
+,
+{/if}
+{/foreach}
+{literal}
+];
+$(document).ready(function(){
+	$('#picchange').d_imagechange({
+		data:data,
+		bgHeight:24,
+		titleTop:2,
+		descTop:0,
+		btnTop:4,
+		desc:false,
+		animateStyle:'o',//默认值'o',可以不写	
+		playTime:3000,
+		animateTime:1000,
+		width:350,
+		height:240,
+	});
+});
+</script>
+{/literal}
+
+<div class="mainBody">
+  <div class="leftText">
+    <div class="ads">
+      <marquee width="600" scrollamount="3" scrolldelay="100">
+        {$notice.content}
+      </marquee>
+    </div>
+    <div style="overflow:hidden;">
+      <div id="picchange" style="width:350px; height:240px; float:left; margin-right:5px; border:1px solid #ccc;"></div>
+      <div class="brief">
+        <h2>中心简介</h2>
+        <p><a href="article/article.php?aid={$CenterDesc.aid}">{$CenterDesc.memo}</a></p>
+        <p>工作时间：周一至周五；上午(8：30-11：30)；下午(12：30-16：30)</p>
+      </div>
+      <div class="mainText" style="margin-right:5px;">
+        <div class="textTetal"> <span style="float:left;">首饰检测</span><a href="article/list.php?cid=2">更多></a> </div>
+        <ul>
+		{foreach from=$ssjcList item=item name=name}
+            {if $smarty.foreach.name.last}
+        		<li style="border:none;"><a href="article/article.php?aid={$item.aid}">{$item.title}</a></li>
+        	{else}
+         		<li><a href="article/article.php?aid={$item.aid}">{$item.title}</a></li>
+         	{/if}
+		{/foreach}
+        </ul>
+      </div>
+      <div class="mainText">
+        <div class="textTetal"> <span style="float:left;">新闻资讯</span><a href="article/list.php?cid=1">更多></a> </div>
+        <ul>
+        {foreach from=$xwzxList item=item name=name}
+            {if $smarty.foreach.name.last}
+        		<li style="border:none;"><a href="article/article.php?aid={$item.aid}">{$item.title}</a></li>
+        	{else}
+         		<li><a href="article/article.php?aid={$item.aid}">{$item.title}</a></li>
+         	{/if}
+		{/foreach}
+        </ul>
+      </div>
+	  <div style="clear:both;"></div>
+	  <div style="margin-top:10px;">
+	  <object width="709" height="98" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+          <param value="http://www.njc.com.cn/images/a.swf" name="movie">
+          <param value="high" name="quality">
+          <embed width="709" height="98" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://www.njc.com.cn/images/a.swf">
+        </object>	  
+	  </div>
+      <div class="brief2">
+        <h2>全国首饰标准化技术委员会</h2>
+        <p>全国首饰标准化技术委员会（以下简称首饰标委会）由国家首饰质量监督检验中心负责组织筹建，2000年11月经国家质量监督检验检疫总局批准成立。秘书处设在国家首饰质量监督检验中心，负责日常管理工作。</p>
+        <p>第二届标委会由质检机构、生产及经销企业、科研院校的专家组成，共有委员34人，顾问2人，主要负责首饰领域的标准化工作，包括国家标准和行业标准的制定、修订，相关标准的报批和归口。</p>
+        <p>自1988年由北京工艺美术研究所起草制定了首饰行业第一个标准《首饰含金量分析方法》（GB/T 9288-1989）以来，首饰行业已先后制定了18项国家标准和18项行业标准（其中1项已废止），居世界前列。特别是强制性标准GB 11887-2008作为首饰行业十分重要的基础标准，不仅规定了首饰中主要的贵金属纯度，也规定了首饰中有害元素的限量，为规范首饰市场，保护消费者权益做出了很大贡献。</p>
+        <p>目前由首饰标委会负责归口的国家标准一共有18项，包括1项强制性标准，17项推荐性标准，其中有6项标准修改采用了ISO国际标准，2项修改采用了欧盟标准。行业标准一共有17项，包括2项强制性标准，15项推荐性标准，其中1项修改采用了ISO国际标准。</p>
+        <p>中国是国际标准化组织珠宝首饰技术委员会（ISO/TC 174）的积极（P）成员，首饰标委会代表我国参加该组织制定、修订国际标准的投票、复审工作，以及年会和技术交流活动。</p>
+      </div>
+      <div class="mainText" style="margin-right:5px;">
+        <div class="textTetal"> <span style="float:left;">教育培训</span><a href="article/list.php?cid=3">更多></a> </div>
+        <ul>
+        {foreach from=$jypxList item=item name=name}
+        	{if $smarty.foreach.name.last}
+        		<li style="border:none;"><a href="article/article.php?aid={$item.aid}">{$item.title}</a></li>
+        	{else}
+         		<li><a href="article/article.php?aid={$item.aid}">{$item.title}</a></li>
+         	{/if}
+		{/foreach}
+        </ul>
+      </div>
+      <div class="mainText">
+        <div class="textTetal"> <span style="float:left;">珠宝知识及鉴赏</span><a href="article/list.php?cid=4">更多></a> </div>
+        <ul>
+        {foreach from=$zbzsList item=item name=name}
+        	{if $smarty.foreach.name.last}
+        		<li style="border:none;"><a href="article/article.php?aid={$item.aid}">{$item.title}</a></li>
+        	{else}
+         		<li><a href="article/article.php?aid={$item.aid}">{$item.title}</a></li>
+         	{/if}
+		{/foreach}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="righText">
+    <img src="{$smarty.const.IMG_PATH}wscx.jpg" />
+    {include file="card/right.html"}
+    <img src="{$smarty.const.IMG_PATH}dxcx.jpg" />
+    <div class="dxcxBox" style="padding-bottom:10px;"> <img src="{$smarty.const.IMG_PATH}dxcxText.jpg" /> </div>
+<!--
+    <img src="{$smarty.const.IMG_PATH}sshy.gif" />
+    <div class="sshyBox">
+    	<span>用户名：</span><input class="butText" /><br />
+        <span style="padding-right:12px;">密码：</span><input class="butText" />
+                <input type="button" style="margin-left:40px" class="butTwo" value=" 登陆 " />
+                <input type="button" class="butTwo" value=" 帮助 " />
+    </div>
+-->
+    <img src="{$smarty.const.IMG_PATH}grzx.gif" />
+    <div class="grzxBox">
+    	<form onsubmit="return mailcheck();" name="form_wm" method="post" action="http://smail2.263xmail.com/xmweb"> 
+    	<input type="hidden" value="gb" name="chr">
+    	<input type="hidden" value="login" name="func">
+    	<input type="hidden" name="domain" value="njc.com.cn">
+    	<span>邮箱名：</span><input class="butText" id="usr" name="usr"/><br />
+		<span style="padding-left:60px;">@njc.com.cn</span><br />
+        <span style="padding-right:12px;">密码：</span><input type="password" size="15" id="pass" class="butText" name="pass">       
+        <input type="submit" style="margin-left:40px" class="butTwo"  name="image" value="登录" onclick="AddDomain();"> 
+        <input type="button" class="butTwo" value=" 帮助 " onclick="window.location='http://gmail.263.net/xmail/xmail_guide.htm'"/>
+        <input type="button" class="butTwo" style="width:120px; margin-left:40px;background-image:url({$smarty.const.IMG_PATH}button_bg02.jpg);" value=" 邮箱管理员登陆 " onclick="window.location='http://macom.263xmail.com/ma/'"/>    
+        </form>
+    </div>
+    <!-- 
+    <img src="{$smarty.const.IMG_PATH}xzzx.jpg" />
+    <div class="xzzxBox">
+    	<ul>
+        	<li><a href="#">化学法分析贵金属含量标准</a></li>
+        	<li><a href="#">化学法分析贵金属含量标准</a></li>
+        	<li><a href="#">化学法分析贵金属含量标准</a></li>
+        	<li><a href="#">化学法分析贵金属含量标准</a></li>
+        	<li><a href="#">化学法分析贵金属含量标准</a></li>
+        </ul>
+    </div>
+     -->
+  </div>
+</div>
+{include file="footer.html"}

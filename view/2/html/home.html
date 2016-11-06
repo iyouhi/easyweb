@@ -1,0 +1,36 @@
+{include file="header.html"}
+    <div class="main">
+    	<ul class="mainList">
+        	<li><a href="{$smarty.const.BASE_DOMAIN}article/single.php?singleid={$smarty.const.SINGLEPAGE_KCSZ}">
+            	<h2>{$kcszInfo.title}</h2>
+                <img class="img" src="{$smarty.const.BASE_DOMAIN}userfiles/{$kcszInfo.pic}" alt="" />
+                <p>{$kcszInfo.intro}</p>
+            </a></li>
+            <li><a href="{$smarty.const.BASE_DOMAIN}article/article.php?cid={$smarty.const.CATE_GYWM}">
+            	<h2>{$gywmInfo.cname}</h2>
+                <img class="img" src="{$smarty.const.BASE_DOMAIN}userfiles/{$gywmInfo.pic}" alt="" />
+                <p>{$gywmInfo.memo}</p>
+            </a></li>
+            <li><a href="{$smarty.const.BASE_DOMAIN}article/single.php?singleid={$smarty.const.SINGLEPAGE_JXLN}">
+            	<h2>{$jxlnInfo.title}</h2>
+                <img class="img" src="{$smarty.const.BASE_DOMAIN}userfiles/{$jxlnInfo.pic}" alt="" />
+                <p>{$jxlnInfo.intro}</p>
+            </a></li>
+            <li><a href="{$smarty.const.BASE_DOMAIN}article/article.php?cid={$smarty.const.CATE_SYHD}">
+            	<h2>{$syhdInfo.cname}</h2>
+                <img class="img" src="{$smarty.const.BASE_DOMAIN}userfiles/{$syhdInfo.pic}" alt="" />
+                <p>{$syhdInfo.memo}</p>
+            </a></li>
+            <li><a href="{$smarty.const.BASE_DOMAIN}article/article.php?cid={$smarty.const.CATE_SZLL}">
+            	<h2>{$szllInfo.cname}</h2>
+                <img class="img" src="{$smarty.const.BASE_DOMAIN}userfiles/{$szllInfo.pic}" alt="" />
+                <p>{$syhdInfo.memo}</p>
+            </a></li>
+            <li><a href="{$smarty.const.BASE_DOMAIN}article/single.php?singleid={$smarty.const.SINGLEPAGE_QA}">
+            	<h2>{$qaInfo.title}</h2>
+                <img class="img" src="{$smarty.const.BASE_DOMAIN}userfiles/{$qaInfo.pic}" alt="" />
+                <p>{$qaInfo.intro}</p>
+            </a></li>
+        </ul>
+    </div>
+{include file="footer.html"}

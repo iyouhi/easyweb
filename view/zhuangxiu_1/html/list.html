@@ -1,0 +1,22 @@
+{include file='header.html'}
+<div class="cont-main">
+	<h2><a href="">{$cateInfo.cname}</a></h2>
+
+{foreach from=$articleList item=item}
+<div class="grids">
+	<div class="grid">
+	<a href="/article.php?aid={$item.aid}"><img src="{$smarty.const.STATIC_PATH}images/pic9.jpg" alt="{$item.title}"></a>
+	<h4>{$item.title}</h4>
+	{if $item.memo}
+	<p>{$item.memo}</p>
+	{/if}
+	<div class="btn-top"><a href="/article.php?aid={$item.aid}"><button class="btn btn-2 btn-2h">查看</button></a></div>
+	</div>
+</div>
+{/foreach}
+
+<div class="clear"></div>
+</div>
+</div>
+{include file="right.html"}
+{include file="footer.html"}

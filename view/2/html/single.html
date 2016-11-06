@@ -1,0 +1,22 @@
+{include file="header.html"}
+     <div class="main content">
+    	<div class="left">
+        	<h2><img src="{$smarty.const.IMG_PATH}xxclew.gif" alt="" /></h2>
+            <div class="leftCont">
+            	{$xxjjInfo.content}
+            </div><!--leftCont end-->
+        </div><!--left end-->
+        <div class="right">
+        	<div class="breadCrumb">您现在所在的位置：<a href="#">首页</a> &gt; {$singleInfo.title}</div>
+            <div class="mainCont">
+            	<h1>{$singleInfo.title}</h1>
+                <div class="summary">
+					{$singleInfo.intro}
+				</div>
+				<div class="cont">
+					{$singleInfo.content}
+                </div><!--cont end-->
+            </div><!--mainCont end-->
+        </div><!--right end-->	
+    </div><!--main end-->
+{include file="footer.html"}

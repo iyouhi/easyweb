@@ -1,0 +1,83 @@
+{include file="header.html"}
+<div class="mainBody">
+<div class="leftText" style='border: 1px solid #CCCCCC;'>
+<div style="margin: 20px;">
+<table width="100%" cellspacing="1" cellpadding="5" border="0"
+	align="center">
+	<tbody>
+		<tr>
+			<td width="691"
+				style="border-bottom: 1px solid rgb(213, 216, 223); padding-bottom: 10px; padding-top: 20px;">
+			<div align="center"><span
+				style="font-size: 18px; font-weight: bold;">标签查询结果</span>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="content">
+				{if $lableInfo}
+				<table cellspacing="1" cellpadding="0" border="0" width="100%">
+					<tbody>
+						<tr bgcolor="#ffffff">
+							<td height="22" class="height" colspan="4">
+							<table cellspacing="1" cellpadding="0" border="0" width="100%">
+								<tbody>
+									<tr>
+										<td height="30">
+										<div align="center"><strong><span class="style1">{$lableInfo.code}</span></strong></div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff">
+							<td height="30" width="22%" class="height">
+							<div align="left"></div>
+							</td>
+							<td height="30" width="31%" class="height">
+							<div align="left"></div>
+							</td>
+							<td height="30" width="26%" class="height">
+							<div align="left"></div>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff">
+							<td height="30" class="height">
+								<div align="left"></div>
+							</td>
+							<td height="30" class="height">
+							<div align="center">{$lableInfo.zhil}克</div>
+							</td>
+							<td height="30" class="height">
+								<div align="left"></div>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff">
+							<td height="30" class="height">
+								<div align="left"></div>
+							</td>
+							<td height="30" class="height">
+							<div align="center">{$lableInfo.gold}{$lableInfo.name}</div>
+							</td>
+							<td height="30" class="height">
+								<div align="left"></div>
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+
+				{else}
+					查询无结果
+				{/if}
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+<div class="righText">
+	{include file="card/right.html"}
+</div>
+</div>
+{include file="footer.html"}

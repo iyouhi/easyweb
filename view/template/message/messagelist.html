@@ -1,0 +1,117 @@
+{include file="header.html"}
+<div class="mainBody">
+  <div class="leftText">
+
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" 	align="center">
+	<tbody>
+		<tr>
+			<td width="140" height="31" background="{$smarty.const.IMG_PATH}ny_l_t.jpg">
+			<div class="ny_t_z"><img align="absbottom" src="{$smarty.const.IMG_PATH}5.gif">留言板</div>
+			</td>
+			<td width="626" height="31" background="{$smarty.const.IMG_PATH}ny_l_bg.jpg" align="right"></td>
+			<td><img src="{$smarty.const.IMG_PATH}ny_l_r.jpg"></td>
+		</tr>
+		<tr>
+			<td width="100%" valign="top" colspan="3" style="border:1px solid #ccc">
+			<table width="100%" cellspacing="0" cellpadding="0" border="0">
+				<tbody>
+					<tr>
+						<td width="100%">
+						<table width="100%" cellspacing="0" cellpadding="0" border="0"
+							align="center">
+							<tbody>
+								<tr>
+									<td width="400%" align="center" colspan="2">
+									<table width="100%" cellspacing="0" cellpadding="0" border="0"
+										align="center">
+										<tbody>
+											<tr>
+												<td height="5"></td>
+											</tr>
+											<tr>
+												<td valign="top" align="left">
+												<table width="50%" cellspacing="0" cellpadding="0"
+													border="0" align="center">
+													<tbody>
+														<tr>
+														</tr>
+													</tbody>
+												</table>
+												<!-- contnet regin start -->
+												{foreach from=$messageList item=item}
+													<div style="margin:20px;border:1px solid black;padding:10px;">
+														<p>{$item.content}</p><br/>
+														<span style="color:#666">{$item.add_time} 来自：{$item.author}</span>
+														{if $item.reply}<pre>{$item.reply}</pre>{/if}
+													</div>
+												{/foreach}
+												</td>
+											</tr>
+											<tr>
+												<td> &nbsp</td>
+											</tr>
+											<tr>
+												<td>
+{if $pageinfo.totalpage>1}												
+		<table width="80%" cellspacing="0" cellpadding="0" border="0" align="center" class="right-font08">
+              <tbody><tr>
+              	<td width="30%">&nbsp</td>
+               <td width="30%">共 <span class="right-text09">{$pageinfo.totalpage}</span> 页 | 第 <span class="right-text09">{$pageinfo.page}</span> 页</td>
+                <td width="40%" align="right">[{if $pageinfo.first}<a href="{$pageinfo.first}" class="right-font08">首页</a>{else}首页{/if} | {if $pageinfo.previous}<a href="{$pageinfo.previous}" class="right-font08">上一页</a>{else}上一页{/if} | {if $pageinfo.next}<a href="{$pageinfo.next}" class="right-font08">下一页</a>{else}下一页{/if} | {if $pageinfo.last}<a href="{$pageinfo.last}" class="right-font08">末页</a>{else}末页{/if}] </td>
+             </tr>
+          </tbody></table>
+{/if}
+          										</td>
+											</tr>
+											<tr>
+												<td> &nbsp</td>
+											</tr>
+											<tr>
+												<td>
+												<form action="{$smarty.const.BASE_DOMAIN}message/addmessage.php" method="post" name="form1">
+													<table style="margin:20px">
+														<tbody>
+															<tr>
+											              		<td>昵称：</td>	
+											              		<td><input type="text" name="author" value="" style="border: 1px solid #7F9DB9;"/></td>									                	
+											             	</tr>
+											             	<tr>
+											              		<td>留言：</td>	
+											              		<td><textarea name="content" cols="80" rows="5" style="border: 1px solid #7F9DB9;"></textarea></td>									                	
+											             	</tr>
+											             	<tr>
+											             		<td><input name="submit" type="submit" value="提交" /></td>
+											              		<td>&nbsp</td>												              										                	
+											             	</tr>
+											        	</tbody>
+													</table>
+												</form>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3"></td>
+		</tr>
+	</tbody>
+</table>
+		
+
+  </div>
+  <div class="righText">
+	{include file="article/right.html"}
+	</div>
+</div>
+{include file="footer.html"}

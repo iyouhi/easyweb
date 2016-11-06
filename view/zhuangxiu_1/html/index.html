@@ -1,0 +1,56 @@
+{include file='header.html'}
+<div class="cont-main">
+	<h2>欢迎来到<a href="">{$project.title}</a></h2>
+	<div class="grid-list">
+		<h4>{$home_position.1.category_info.cname}</h4>
+		<ul>
+			{foreach from=$home_position.1.articles item=item}
+			<li>
+				<a href="/article.php?aid={$item.aid}"><img src="{$item.pic}" width="280" height="100" alt=""></a>
+				<p style="">{$item.title}</p>
+			</li>
+			{/foreach}
+
+		</ul>
+		<div class="clear"></div>
+		<div class="rd-more"><a href="/list.php?cid={$home_position.0.category_info.cid}"><button class="btn btn-2 btn-2h">More</button></a></div>
+	</div>
+	<div class="grid-list1">
+		<h4>{$home_position.2.category_info.cname}</h4>
+		<ul>
+			{foreach from=$home_position.2.articles item=item}
+			<li>
+				<a href="/article.php?aid={$item.aid}"><img src="{$item.pic}" width="280" height="100" alt=""></a>
+				<p style="">{$item.title}</p>
+			</li>
+			{/foreach}
+
+		</ul>
+		<div class="clear"></div>
+		<div class="rd-more"><a href="/list.php?cid={$home_position.0.category_info.cid}"><button class="btn btn-2 btn-2h">More</button></a></div>
+	</div>
+	
+
+	<div class="clear"></div>
+	<div class="grid-list-main">
+	<div class="grid-list-btm">
+		<h4>{$home_position.3.category_info.cname}</h4>
+		<p>{$home_position.3.articles.0.memo}</p>
+	<div class="readmore"><a href="/list.php?cid={$home_position.3.category_info.cid}"><button class="btn btn-2 btn-2h">More</button></a></div>
+	</div>	
+	<div class="grid-list-pic">
+		<h4>{$home_position.4.category_info.cname}</h4>
+		<ul>
+			{foreach from=$home_position.4.articles item=item}
+			<li><a href="/article.php?aid={$item.aid}"><img src="{$item.pic}" alt=""></a></li>
+			{/foreach}
+		</ul>
+		
+	</div>
+	<div class="clear"></div>
+	</div>
+</div>
+</div>
+{include file='right.html'}
+
+{include file='footer.html'}

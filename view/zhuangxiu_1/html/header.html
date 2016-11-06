@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Home</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="{$smarty.const.STATIC_PATH}css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="{$smarty.const.STATIC_PATH}css/coin-slider-styles.css" rel="stylesheet" type="text/css" media="all" />
+	
+	<script src="{$smarty.const.STATIC_PATH}js/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script src="{$smarty.const.STATIC_PATH}js/jquery-ui-1.10.2.custom.js" type="text/javascript"></script>
+	<script src="{$smarty.const.STATIC_PATH}js/coin-slider.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="wrap">
+<div class="wrapper">
+<div class="header">
+<div class="header-left">
+      <div class="logo">
+        <a href="/"><img src="{$project['logo']}" alt=""></a>
+      </div>
+</div>
+<div class="header-right">
+<div class="contact-info">
+					<p><img src="{$smarty.const.STATIC_PATH}images/c-icon.png" title="contact-info" />联系电话</p>
+					<p><span>{$project['phone']}</span></p>
+				</div>
+</div>
+<div class="clear"></div>
+<div class="top-nav">
+		<ul>
+			<li {if !isset($cateInfo)}class="active"{/if}><a href="/">首页</a></li>
+	        {foreach from=$topcategory_on_header item=item}
+                <li {if isset($cateInfo) and $cateInfo.cid eq $item.cid}class="active"{/if}><a href="/list.php?cid={$item.cid}">{$item.cname}</a></li>
+            {/foreach} 
+		<div class="clear"> </div>
+		</ul>
+</div>
+</div> 
+<div class="content"> 
+	<!--图片轮换-->
+	<div id="flexslider">
+		{foreach from=$slider_article item=item}
+		<a href="/article.php?aid={$item.aid}" target="_self">
+			<img src="{$item.slide_pic}" width="1024px" height="384px" border="0" style="display: none;">
+		</a>
+		{/foreach}      			
+	</div>
+
+
+
+<div class="clear"></div>
+
+<script type="text/javascript" language="javascript">
+    $('#flexslider').coinslider({ width: 786, height: 384, links: true});
+</script>

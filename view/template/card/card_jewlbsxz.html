@@ -1,0 +1,100 @@
+			<table cellspacing="1" cellpadding="0" border="0" width="100%">
+				<tbody>
+					<tr bgcolor="#ffffff">
+						<td height="22" class="height" colspan="4">
+						<table cellspacing="1" cellpadding="0" border="0" width="100%">
+							<tbody>
+								<tr>
+									<td height="30">
+									<div align="center"><strong><span class="style1">{$cardInfo.CODE}</span></strong></div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr bgcolor="#ffffff">
+						<td height="30" width="22%" class="height">
+						<div align="left"></div>
+						</td>
+						<td height="30" width="31%" class="height">
+						<div align="left"></div>
+						</td>
+						<td height="30" width="21%" class="height">
+						<div align="left"></div>
+						</td>
+						<td height="30" width="26%" class="height">
+						<div align="left"></div>
+						</td>
+					</tr>
+					<tr bgcolor="#ffffff">
+						<td height="30" class="height">
+						<div align="left"><strong>鉴定结论</strong>：</div>
+						</td>
+						<td height="30" class="height">
+						<div align="left">{$cardInfo.NAME}</div>
+						</td>
+						<td height="30" class="height"></td>
+						<td height="30" class="height">
+						<div align="left">
+						<div align="left"></div>
+						</div>
+						</td>
+					</tr>
+					<tr bgcolor="#ffffff">
+						<td height="30" class="height">
+						<div align="left"><strong>主石颜色</strong>：</div>
+						</td>
+						<td height="30" class="height">
+						<div align="left">{$cardInfo.ZSYS}</div>
+						</td>
+						<td height="30" class="height"></td>
+						<td height="30" class="height">
+						<div align="left">
+						<div align="left"></div>
+						</div>
+						</td>
+					</tr>
+					<tr bgcolor="#ffffff">
+						<td height="30" class="height">
+						<div align="left"><strong>总质量</strong>：</div>
+						</td>
+						<td height="30" class="height">
+						<div align="left">{if $cardInfo.ZZL}{$cardInfo.ZZL}{/if}{$cardInfo.ZZLBZ}</div>
+						</td>
+						<td height="30" class="height">
+						<div align="left"></div>
+						</td>
+						<td height="30" class="height">
+						<div align="left">
+						<div align="left"></div>
+						</div>
+						</td>
+					</tr>
+					<tr bgcolor="#ffffff">
+						<td height="30" class="height">
+						<div align="left"><strong>主石形状</strong>：</div>
+						</td>
+						<td height="30" class="height">
+						<div align="left">{$cardInfo.zsxz}</div>
+						</td>
+						<td height="30" class="height">
+						<div align="left"><strong>放大检查</strong>：</div>
+						</td>
+						<td height="30" class="height">
+						<div align="left">{$cardInfo.NBT}</div>
+						</td>
+					</tr>
+					<tr bgcolor="#ffffff">
+						<td height="30" class="height">
+						<div align="left"><strong>备注</strong>：</div>
+						</td>
+						<td bgcolor="#ffffff" height="30" class="height" colspan="3">
+						<div align="left">{$cardInfo.BZ}</div>
+						<div align="left"></div>
+						<div align="left"></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+

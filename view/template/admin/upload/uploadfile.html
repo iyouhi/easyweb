@@ -1,0 +1,109 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理系统</title>
+<link rel="stylesheet" rev="stylesheet" href="{$smarty.const.ADMIN_CSS_PATH}style.css" type="text/css" media="all" />
+<base target="_self">
+</head>
+<body>
+<center>
+<form name="form2" action="" method="post" enctype="multipart/form-data" target="ifr">
+	<fieldset>
+				<legend>上传文件</legend>
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="17%" height="23">文件：</td>
+      <td width="83%"><input type="file" id="Files" name="Files[]" /><input type="hidden" name="textid" value="{$textid}"></td>
+    </tr>    
+	<tr>
+	 <td colspan="2" height="23">
+      <div align=center><input type="submit" name="issubmit" onclick="showmessage();" value="上传"></div>
+	 </td>
+    </tr>
+</table>
+			  <br />	
+	</fieldset>
+</form>
+<iframe name="ifr" style="display:none"></iframe>
+<center>
+</body>
+</html>
+{literal}
+<script>
+function showmessage(){
+	sAlert("正在上传");
+}
+function Finish(str, filename){
+	var m = filename.lastIndexOf('/');
+	filename = filename.slice(m+1);
+	//删除对话框
+	bjObj = document.getElementById("bgDiv");
+	msgObj = document.getElementById("msgDiv");
+	document.body.removeChild(bjObj);
+	document.body.removeChild(msgObj);
+	//弹出新对话框
+	sAlert(str);
+	window.dialogArguments.form1.filename.value = filename;	                  
+}
+function FinishBig(str, filename){
+	var m = filename.lastIndexOf('/');
+	filename = filename.slice(m+1);
+	//删除对话框
+	bjObj = document.getElementById("bgDiv");
+	msgObj = document.getElementById("msgDiv");
+	document.body.removeChild(bjObj);
+	document.body.removeChild(msgObj);
+	//弹出新对话框
+	sAlert(str);
+	window.dialogArguments.form1.bigpic.value = filename;	
+}
+function sAlert(str){
+   var msgw,msgh,bordercolor;
+   msgw=300;//提示窗口的宽度
+   msgh=50;//提示窗口的高度
+   titleheight=25 //提示窗口标题高度
+   bordercolor="#336699";//提示窗口的边框颜色
+   titlecolor="#99CCFF";//提示窗口的标题颜色
+ 
+   var sWidth,sHeight;
+   sWidth=document.body.offsetWidth;
+   sHeight=document.body.offsetHeight;
+   var bgObj=document.createElement("div");
+   bgObj.setAttribute('id','bgDiv');
+   bgObj.style.position="absolute";
+   bgObj.style.top="0";
+   bgObj.style.background="#777";
+   bgObj.style.filter="progid:DXImageTransform.Microsoft.Alpha(style=3,opacity=25,finishOpacity=75";
+   bgObj.style.opacity="0.6";
+   bgObj.style.left="0";
+   bgObj.style.width=sWidth + "px";
+   bgObj.style.height=sHeight + "px";
+   bgObj.style.zIndex = "10000";
+   document.body.appendChild(bgObj);
+   
+   var msgObj=document.createElement("div")
+   msgObj.setAttribute("id","msgDiv");
+   msgObj.setAttribute("align","center");
+   msgObj.style.background="white";
+   msgObj.style.border="1px solid " + bordercolor;
+   msgObj.style.position = "absolute";
+   msgObj.style.left = "70%";
+   msgObj.style.top = "70%";
+   msgObj.style.font="12px/1.6em Verdana, Geneva, Arial, Helvetica, sans-serif";
+   msgObj.style.marginLeft = "-225px" ;
+   msgObj.style.marginTop = -75+document.documentElement.scrollTop+"px";
+   msgObj.style.width = msgw + "px";
+   msgObj.style.height =msgh + "px";
+   msgObj.style.textAlign = "center";
+   msgObj.style.lineHeight ="25px";
+   msgObj.style.zIndex = "10001";
+   
+   document.body.appendChild(msgObj);
+   var txt=document.createElement("p");
+   txt.style.margin="1em 0"
+   txt.setAttribute("id","msgTxt");
+   txt.innerHTML=str;
+   document.getElementById("msgDiv").appendChild(txt);
+}
+</script>
+{/literal}

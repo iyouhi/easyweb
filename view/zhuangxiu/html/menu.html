@@ -1,0 +1,28 @@
+<table cellpadding="0" cellspacing="0" width="100%">
+    <tbody>
+        <tr>                                                    
+            <td align="left" style="padding-top:0px;">
+                <ul class="menu">
+                    <li style="width:106px; text-align:right; padding-right:16px;background-image:none !important; margin-top:5px; height:20px !important;">
+                        <a href="./index_files/index.html" target="_self">  
+                            <img src="{$smarty.const.STATIC_PATH}images/bg_menutitle_homelogo.gif" style="border:0px;">
+                         </a>
+                    </li>
+                    {foreach from=$topcategory_on_header item=item}
+                        <li style="width:1px;"><img src="{$smarty.const.STATIC_PATH}images/bg_menutitle_apart.gif" height="31px"></li>
+                        <li><a href="/list.php?cid={$item.cid}" target="_self">{$item.cname}</a>
+                          {if !empty($subcategory_on_header[$item.cid])}
+                            <ul>
+                            {foreach from=$subcategory_on_header[$item.cid] item=i}
+                                  <li><a href="/list.php?cid={$i.cid}" target="_self">{$i.cname}</a></li>
+                            {/foreach}
+                            </ul>
+                          {/if} 
+                        </li>
+                    {/foreach}                    
+                </ul>
+            </td>                                                         
+        </tr>                                                
+    </tbody>
+</table>
+                                        

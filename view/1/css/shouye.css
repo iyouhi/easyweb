@@ -1,0 +1,59 @@
+/* CSS Document */
+body{ margin:0; padding:0; font-size:13px; color:#333333; font-family:"Î¢ÈíÑÅºÚ", "ºÚÌå"; background:url(../images/top_bj.jpg)}
+a:link {
+	color: #333333;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: none;
+	color: #0080FF;
+}
+a:active {
+	text-decoration: none;
+	color: #333333;
+}
+ul{ margin:0; padding:0;}
+li{ margin:0; padding:0; list-style:none;}
+#top{ width:100%; height: auto;}
+#top1{ width:100%; height:100px; background:url(../images/topbg.jpg) center;}
+#top11{ width:1002px; height:100px; margin:0 auto;}
+#logo{ width:350px; height:100px; float:left;}
+#dh{ width:650px; height:100px; float:left;}
+#sc{ width:650px; height:30px; line-height:30px; text-align:right;}
+#nav {position:relative; height:32px; font-size:16px; color: #0080FF; margin-top:20px;width:650px;}
+#nav ul { list-style-type:none;  }
+#nav ul li { float:left; position: relative; text-align:center;}
+#nav ul li a {height:32px; line-height:32px; width:87px;display:block; text-decoration:none; text-align:center; color:#004EA2;}
+#nav ul li a:hover {background: url(../images/nav_cur.gif) repeat-x;color:#fff;} 
+
+#flash{ width:100%; height:310px; background:url(../images/banner.jpg) center; border-bottom:3px #666666 solid;}
+#flash1{ width:1000px; height:310px; margin:0 auto;}
+
+#body{ width:1000px; height: auto;background:#FFFFFF; padding:10px; padding-bottom:30px;}
+#left{ width:250px; height: auto; float:left;border:1px #CCCCCC solid; padding-bottom:10px;}
+#fwfw{ width:250px; height:auto; padding-bottom:10px;}
+#fwt{ width:250px; height:40px; background:url(../images/fwt.png);}
+#fwfw ul{display:block;width:250px;height:auto; margin:0; padding:0;}
+#fwfw ul li{display:block;width:220px;height:35px;padding:0;margin:0;line-height:35px; list-style:none; text-align:left; padding-left:30px; border-bottom:1px #CCCCCC dashed;}
+#lx{ width:250px; height:auto;}
+#lx ul{ display:block;width:250px; height:auto;}
+#lx ul li{ display:block;width:180px; height:30px; line-height:30px; text-align:left;}
+
+#right{ width:730px; height:auto; margin-left:16px;float:left;}
+#gsjj{ width:730px; height:auto; line-height:28px; text-align:left;}
+#gst{ width:730px; height:48px; background:url(../images/gsjj.png);}
+#xw{width:730px; height:165px;}
+#xwt{width:730px; height:30px; background:url(../images/xwt.png);}
+#xw ul{ display:block;width:730px; height:130px; margin-top:5px;}
+#xw ul li{ display:block;width:345px; height:30px; line-height:30px; float:left; border-bottom:1px #CCCCCC dashed; margin-left:15px; text-align:left;}
+#foot{width:100%; height:100px; background:#EEEEEE; border-top:2px #999999 solid;}
+#foot1{width:1000px; height:80px; margin-top:20px; margin-left:auto; margin-right:auto;}
+#dblx{ width:400px; height:80px; float:left; text-align:left; line-height:30px;}
+#dblx1{ width:590px; height:80px; float:left; text-align:right;}
+
+#wzdh{ width:650px; height:48px; background: url(../images/wzdh.png); padding-left:80px; line-height:35px; color:#FFFFFF;}
+#wzdh a{color:#FFFFFF}

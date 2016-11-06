@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$project.title}</title>
+<link href="{$smarty.const.STATIC_PATH}css/style.css" type="text/css" rel="stylesheet">
+<script src="{$smarty.const.STATIC_PATH}js/comm.js" type="text/javascript">
+
+function MM_CheckFlashVersion(reqVerStr,msg){
+  with(navigator){
+    var isIE  = (appVersion.indexOf("MSIE") != -1 && userAgent.indexOf("Opera") == -1);
+    var isWin = (appVersion.toLowerCase().indexOf("win") != -1);
+    if (!isIE || !isWin){  
+      var flashVer = -1;
+      if (plugins && plugins.length > 0){
+        var desc = plugins["Shockwave Flash"] ? plugins["Shockwave Flash"].description : "";
+        desc = plugins["Shockwave Flash 2.0"] ? plugins["Shockwave Flash 2.0"].description : desc;
+        if (desc == "") flashVer = -1;
+        else{
+          var descArr = desc.split(" ");
+          var tempArrMajor = descArr[2].split(".");
+          var verMajor = tempArrMajor[0];
+          var tempArrMinor = (descArr[3] != "") ? descArr[3].split("r") : descArr[4].split("r");
+          var verMinor = (tempArrMinor[1] > 0) ? tempArrMinor[1] : 0;
+          flashVer =  parseFloat(verMajor + "." + verMinor);
+        }
+      }
+      // WebTV has Flash Player 4 or lower -- too low for video
+      else if (userAgent.toLowerCase().indexOf("webtv") != -1) flashVer = 4.0;
+
+      var verArr = reqVerStr.split(",");
+      var reqVer = parseFloat(verArr[0] + "." + verArr[2]);
+  
+      if (flashVer < reqVer){
+        if (confirm(msg))
+          window.location = "http://www.macromedia.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash";
+      }
+    }
+  } 
+}
+</script>
+<script src="{$smarty.const.STATIC_PATH}js/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script src="{$smarty.const.STATIC_PATH}js/lrtk.js" type="text/javascript"></script>
+</head>
+<body onload="MM_CheckFlashVersion(&#39;7,0,0,0&#39;,&#39;本页内容需要使用较新的 Macromedia Flash Player 版本。是否现在下载它？&#39;);">
+<div class="content">
+  <!--导航-->
+  <div class="top"><div class="lk"><a class="jpkc btl" href="/cn_index.asp" target="_blank">CHINESE</a><a href="/index.asp" class="xylj " target="_blank">ENGLISH</a></div><img src="{$project.logo}" width="548" height="110" style="float:left;" alt="枣庄市汇力纺织品有限公司">
+  
+  </div>
+<div class="flash">
+  <div class="f_cont">
+    <div class="flashBanner"> 
+    <a href="http://sdhltex.com/#"><img class="bigImg" width="1250" height="317" border="0" src="" style="display: inline;"></a>
+      <div class="mask" style="display: none; bottom: 0px;">
+      	{foreach from=$slider_article item=item}
+      	<img src="{$item.pic}" uri="{$item.pic}" link="#" width="60" height="22" class="show">
+      	{/foreach}
+	   </div>
+    </div>
+  </div>
+
+</div>
+  <div class="nav">
+    <ul>
+      <li class="main_ bn"><a href="/"><img src="{$smarty.const.STATIC_PATH}images/home.gif" width="20" height="59" border="0"></a></li>
+      {foreach from=$topcategory_on_header item=item}
+      {if !empty($subcategory_on_header[$item.cid])}
+      	<li class="main_"  onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+      	{$item.cname}
+      {else}
+      	<li class="main_">
+      	<a class="nvali" href="/list.php?cid={$item.cid}">{$item.cname}</a> 
+      {/if}	  
+      		<ul style="display: none;">
+              {foreach from=$subcategory_on_header[$item.cid] item=i}
+              <li><a href="/list.php?cid={$i.cid}">{$i.cname}</a> </li>
+              {/foreach}
+            </ul>
+      </li>
+      {/foreach}
+    </ul>
+  </div>
+ 

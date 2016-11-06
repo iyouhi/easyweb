@@ -1,0 +1,49 @@
+	    <img src="{$smarty.const.IMG_PATH}sshy.gif"/>
+	    <div class="sshyBox">
+		{if $cuser}
+		<div style="line-height:14px;margin:10px;">
+			当前用户：{$cuser.name}<br/>
+			<a href="{$smarty.const.BASE_DOMAIN}loginout.php">修改密码</a> | <a href="{$smarty.const.BASE_DOMAIN}loginout.php">退出</a>
+		</div>
+		{else}
+		<form name="form1" action="{$smarty.const.BASE_DOMAIN}login.php" method="POST" >
+	    	<span>用户名：<input class="butText" style="width:140px;" name="username"/></span><br />
+		<span>密&nbsp;&nbsp;&nbsp;码：<input class="butText"  style="width:140px;" name="password"/></span><br />
+		<span>验证码：<input class="butText"  style="width:60px;" name="vcode"/></span><br/>
+		<span><img width="75" height="20" src="{$smarty.const.BASE_DOMAIN}aj_getvcode.php" id="nowimg"><a class="login-text03" href="javascript:">看不清，换一张</a></span><br/>
+		<input type="hidden" value=1 name="issubmit">
+		<input type="button" style="margin-left:40px" class="butTwo" value=" 登陆 " onclick="form1.submit();"/>
+		<input type="button" class="butTwo" value=" 注册 " onclick="alert(暂无法注册，请拨打服务电话开通。);"/>
+		</form>
+{/if}
+	    </div> 
+{if $cuser}
+		<div class="mainText" style="width:218px;">
+			<div class="textTetal"> <span style="float:left;">下载列表</span></div>
+			<ul style="margin:0;width:180px;">       
+			{foreach from=$downloadList item=item name=name1}
+				{if $smarty.foreach.name1.last}
+					<li style="border:none;"><a target="_blank" href="{$smarty.const.BASE_DOMAIN}committee/download.php?id={$item.id}">{$item.filename}</a></li>
+				{else}
+					<li><a target="_blank" href="{$smarty.const.BASE_DOMAIN}committee/download.php?id={$item.id}">{$item.filename}</a></li>
+				{/if}
+			{/foreach}
+
+			</ul>
+		</div> 
+{/if}
+		<div class="mainText" style="width:218px;margin-top:10px;">
+			<div class="textTetal"> <span style="float:left;">新闻咨询</span></div>
+			<ul style="margin:0;width:180px;">       
+			{foreach from=$xwzxList item=item name=name}
+				{if $smarty.foreach.name.last}
+					<li style="border:none;"><a href="{$smarty.const.BASE_DOMAIN}article/article.php?aid={$item.aid}">{$item.title}</a></li>
+				{else}
+					<li><a href="{$smarty.const.BASE_DOMAIN}article/article.php?aid={$item.aid}">{$item.title}</a></li>
+				{/if}
+			{/foreach}
+			</ul>
+		</div>
+
+
+

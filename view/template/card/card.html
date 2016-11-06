@@ -1,0 +1,37 @@
+{include file="header.html"}
+<div class="mainBody">
+<div class="leftText" style='border: 1px solid #CCCCCC;'>
+<div style="margin: 20px;">
+<table width="100%" cellspacing="1" cellpadding="5" border="0"
+	align="center">
+	<tbody>
+		<tr>
+			<td width="691"
+				style="border-bottom: 1px solid rgb(213, 216, 223); padding-bottom: 10px; padding-top: 20px;">
+			<div align="center"><span
+				style="font-size: 18px; font-weight: bold;">证书查询结果</span>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="content">
+				{if $cardType == 1}
+					{include file="card/card_jewlbsxz.html"}
+				{elseif $cardType == 2}
+					{include file="card/card_jewlzs.html"}
+				{elseif $cardType == 3}
+					{include file="card/card_jewlbs.html"}
+				{else}
+					查询无结果
+				{/if}
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+<div class="righText">
+	{include file="card/right.html"}
+</div>
+</div>
+{include file="footer.html"}
